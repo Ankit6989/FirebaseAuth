@@ -12,15 +12,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.apcoding.firebaseauth.ui.theme.spacing
-import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.ui.tooling.preview.Preview
 import com.apcoding.firebaseauth.R
-
+import com.apcoding.firebaseauth.ui.theme.FirebaseAuthTheme
 
 
 @Composable
 fun AuthHeader() {
     Column(
-        modifier = Modifier.wrapContentSize(),
+        //When you apply wrapContentWidth() to a composable, it instructs the layout system to measure the content and adjust the width of the composable accordingly
+        modifier = Modifier.wrapContentWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val spacing = MaterialTheme.spacing
@@ -43,5 +44,12 @@ fun AuthHeader() {
             color = MaterialTheme.colorScheme.onSurface
         )
     }
-}
 
+}
+    @Preview(showBackground = true)
+    @Composable
+    fun AppHeaderDark() {
+        FirebaseAuthTheme {
+            AuthHeader()
+        }
+    }

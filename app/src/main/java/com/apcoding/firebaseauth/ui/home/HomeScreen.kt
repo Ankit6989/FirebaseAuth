@@ -19,9 +19,6 @@ import com.apcoding.firebaseauth.ui.theme.spacing
 
 import com.apcoding.firebaseauth.R
 
-
-
-
 @Composable
 fun HomeScreen(viewModel: AuthViewModel?, navController: NavHostController) {
     val spacing = MaterialTheme.spacing
