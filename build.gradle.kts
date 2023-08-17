@@ -13,6 +13,12 @@ buildscript {
         id("org.jetbrains.kotlin.android") version "1.8.10" apply false
 }
 
+// This line declares a Gradle task named "clean." The type: Delete part specifies that the task is of type "Delete," which means it will perform file deletion operations. 
+// This line registers a custom Gradle task named "clean." The task's name is specified as "clean," and it uses the Delete::class class reference to define the task's type.
 tasks.register("clean", Delete::class) {
+
+// This line is the action associated with the "clean" task. 
+// It instructs Gradle to delete the "build" directory of the root project. 
+// The "rootProject" is a reference to the main project in the Gradle build, and "buildDir" is a property that represents the build directory for the project.
     delete(rootProject.buildDir)
 }
